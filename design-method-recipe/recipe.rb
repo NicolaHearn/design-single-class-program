@@ -6,6 +6,10 @@ As a user
 So that I can keep track of my tasks
 I want a program that I can add todo tasks to and see a list of them.
 
+As a user
+So that I can focus on tasks to complete
+I want to mark tasks as complete and have them disappear from the list.
+
 ## 2. Design the Class Interface
 
 _Include the initializer and public methods with all parameters and return values._
@@ -25,6 +29,11 @@ class ToDoList
   def print_tasks
     # prints a list of all the tasks
     return "#{@list}"
+  end
+
+  def completed_task(task)
+    # remove this task from the @list
+    puts "Task complete!"
   end
 end
 ```
@@ -52,7 +61,10 @@ ToDoList.print_tasks => "Walk the dog/nFeed the cat"
 ToDoList.add("") => fail "You can't add a task without text"
 
 # 5
-ToDoList.print_tasks => fail "No tasks, add a taks before trying to print"
+ToDoList.print_tasks => fail "No tasks, add a tasks before trying to print"
+
+# 6
+
 
 ```
 
